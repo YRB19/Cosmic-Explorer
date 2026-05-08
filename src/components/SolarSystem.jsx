@@ -10,7 +10,7 @@ import { PLANETS_DATA, SUN_DATA } from '../data/planets'
 
 
 function Sun() {
-  const meshRef = useRef()
+  const meshRef = useRef)
 
   useFrame((_, delta) => {
     if (meshRef.current) meshRef.current.rotation.y += 0.04 * delta
