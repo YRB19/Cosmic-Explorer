@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import StarsBackground from './StarsBackground'
 import OrbitRing from './OrbitRing'
 import Planet from './Planet'
-import { PLANETS_DATA, SUN_DATA } from '../data/planets'
+import { PLANETS_DATA, SUN_DATA } from '../data/planet.js'
 
 // ── Sun ──────────────────────────────────────────────────────────────────────
 function Sun() {
