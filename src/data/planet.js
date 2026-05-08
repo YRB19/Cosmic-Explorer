@@ -111,4 +111,4 @@ export const PLANETS_DATA = [
       'made of billions of chunks of ice and rock. It is so light for its size that ' +
       'it would float in water. Saturn has 146 confirmed moons — the most of any planet.',
     nasaQuery: 'saturn rings cassini spacecraft',
-  },
+  },]
