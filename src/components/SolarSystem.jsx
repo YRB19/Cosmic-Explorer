@@ -1,16 +1,13 @@
-
-
 import { useRef } from 'react'                     
-import { Canvas, useFrame } from '@react-three/fiber'  
-
+import { Canvas, useFrame } from '@react-three/fiber' 
 import StarsBackground from './StarsBackground'
 import OrbitRing from './OrbitRing'
 import Planet from './Planet'
 import { PLANETS_DATA, SUN_DATA } from '../data/planets'
 
-
+// ── Sun ──────────────────────────────────────────────────────────────────────
 function Sun() {
-  const meshRef = useRef)
+  const meshRef = useRef()
 
   useFrame((_, delta) => {
     if (meshRef.current) meshRef.current.rotation.y += 0.04 * delta
@@ -18,7 +15,7 @@ function Sun() {
 
   return (
     <group>
-
+      {/* Glowing sun sphere */}
       <mesh ref={meshRef}>
         <sphereGeometry args={[SUN_DATA.size, 40, 40]} />
         <meshStandardMaterial
@@ -29,19 +26,19 @@ function Sun() {
         />
       </mesh>
 
-
+      {/* Soft outer glow */}
       <mesh>
         <sphereGeometry args={[SUN_DATA.size * 1.25, 20, 20]} />
         <meshBasicMaterial color="#FF7700" transparent opacity={0.06} depthWrite={false} />
       </mesh>
 
-
+      {/* Only light source in the scene — illuminates all planets */}
       <pointLight color="#FDB813" intensity={3.5} distance={250} decay={1.1} />
     </group>
   )
 }
 
-
+// ── Main export ───────────────────────────────────────────────────────────────
 export default function SolarSystem({ selectedPlanet, onPlanetSelect }) {
   return (
     <div style={{ position: 'fixed', inset: 0 }}>
@@ -66,7 +63,7 @@ export default function SolarSystem({ selectedPlanet, onPlanetSelect }) {
           </group>
         ))}
 
-
+        {/* No camera controls — camera stays fixed */}
       </Canvas>
     </div>
   )
