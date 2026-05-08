@@ -111,4 +111,41 @@ export const PLANETS_DATA = [
       'made of billions of chunks of ice and rock. It is so light for its size that ' +
       'it would float in water. Saturn has 146 confirmed moons — the most of any planet.',
     nasaQuery: 'saturn rings cassini spacecraft',
-  },]
+  },{
+    id: 'uranus',
+    name: 'Uranus',
+    color: '#8cffff',
+    emissiveColor: '#009090',
+    size: 0.68,
+    orbitRadius: 30,
+    orbitSpeed: 0.0064,
+    initialAngle: 4.0,
+    hasRings: true,
+    ringStyle: 'uranus',
+    diameter: '50,724 km',
+    distanceFromSun: '2.87 billion km',
+    description:
+      'Uranus is an ice giant that rotates on its side — its axial tilt is 98°. ' +
+      'This means its poles experience 42 years of constant sunlight followed by ' +
+      '42 years of total darkness. Voyager 2 is the only spacecraft to have visited it.',
+    nasaQuery: 'uranus planet ice giant voyager',
+  },
+  {
+    id: 'neptune',
+    name: 'Neptune',
+    color: '#5580ff',
+    emissiveColor: '#1a33d6',
+    size: 0.65,
+    orbitRadius: 36,
+    orbitSpeed: 0.005,
+    initialAngle: 2.8,
+    diameter: '49,244 km',
+    distanceFromSun: '4.5 billion km',
+    description:
+      'Neptune is the windiest planet in the solar system, with wind speeds up to ' +
+      '2,100 km/h. It was the first planet discovered through mathematical prediction ' +
+      'rather than observation. Its largest moon, Triton, orbits in the opposite ' +
+      'direction to Neptune\'s rotation.',
+    nasaQuery: 'neptune planet voyager 2 blue',
+  },
+]
