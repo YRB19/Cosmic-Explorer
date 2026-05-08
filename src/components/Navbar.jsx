@@ -25,7 +25,7 @@ export default function Navbar({ selectedPlanet, onReset }) {
             </span>
           </p>
         ) : (
-          <p className="pulse-glow font-orbitron text-xs tracking-widest text-white/30">
+          <p className="glow font-orbitron text-xs tracking-widest text-white/30">
             CLICK A PLANET TO EXPLORE
           </p>
         )}
